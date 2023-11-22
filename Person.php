@@ -5,7 +5,8 @@ class Person
     public $name;
     public $age;
     public $money = 4000;
-    public  function setName($name){
+    public  function __construct($name)
+    {
         $this->name = ucfirst($name);
     }
     public function formatMoney(){
@@ -13,13 +14,12 @@ class Person
     }
 }
 
-$person1 = new Person();
-$person1->setName("rouhi");
+$person1 = new Person("rouhi");
 echo $person1->name . "<br>";
 echo $person1->formatMoney(). "<br>";
 
-$person2 = new Person();
-echo $person2-> name = "karim". "<br>";
+$person2 = new Person("karim");
+echo $person2-> name . "<br>";
 $person2-> money = 5000 ;
 
 echo $person2->formatMoney();
