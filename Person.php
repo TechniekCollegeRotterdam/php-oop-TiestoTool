@@ -5,7 +5,7 @@ class Person
     public $name;
     public $age;
     public $money = 4000;
-    public  function __construct($name)
+    public  function __construct($name = "voornaam")
     {
         $this->name = ucfirst($name);
     }
