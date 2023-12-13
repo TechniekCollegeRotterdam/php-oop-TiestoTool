@@ -10,11 +10,11 @@ class Game
     /**
      * @param string $name
      * @param string $description
-     * @param string $price
+     * @param float $price
      * @param array $tags
      */
 
-    public function __construct($name, $description, $price, $tags)
+    public function __construct(string $name, string $description, float $price, array $tags)
     {
         $this->name = $name;
         $this->description = $description;
