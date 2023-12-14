@@ -2,7 +2,7 @@
 
 class GameList
 {
-    public array $games = [];
+    private array $games = [];
 
     public function addGame(Game $game)
     {

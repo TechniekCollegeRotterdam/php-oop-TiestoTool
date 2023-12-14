@@ -2,10 +2,10 @@
 
 class Game
 {
-    public string $name;
-    public string $description;
-    public float $price;
-    public array $tags;
+    private string $name;
+    private string $description;
+    private float $price;
+    private array $tags;
 
     /**
      * @param string $name
