@@ -6,13 +6,7 @@ class Game
     private string $description;
     private float $price;
     private array $tags;
-
-    /**
-     * @param string $name
-     * @param string $description
-     * @param float $price
-     * @param array $tags
-     */
+    private float $purchaseprice;
 
     public function __construct(string $name, string $description, float $price, array $tags)
     {
@@ -21,8 +15,18 @@ class Game
         $this->price = $price;
         $this->tags = $tags;
     }
-    public function getName()
+
+    private function purchaseprice()
     {
+        $btw = 0.21;
+        $winstPercentage = 0.10;
+        $purchaseprice = $this->price / (1 + $btw);
+        $purchaseprice -= $purchaseprice * $winstPercentage;
+        $this->purchaseprice = $purchaseprice;
+    }
+
+public function getName()
+{
         return $this->name;
     }
 }
